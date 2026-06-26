@@ -1,197 +1,217 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ahmed Alaa - Digital Marketing Strategist</title>
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap');
+    *{box-sizing:border-box;margin:0;padding:0}
+    :root{
+      --gold:#f0c060;
+      --gold-dim:rgba(240,192,96,0.15);
+      --bg:#0b0b12;
+      --bg3:#16161f;
+      --text:#e8e3d8;
+      --muted:#7a7570;
+      --faint:rgba(255,255,255,0.06);
+      --border:rgba(255,255,255,0.08);
+      --green:#25d366;
+    }
+    body {
+      background:var(--bg);
+      margin: 0;
+      padding: 0;
+    }
+    .root{
+      font-family:'Cairo',sans-serif;
+      color:var(--text);
+      direction:rtl;
+      width:100%;
+      font-size:16px;
+      overflow-x: hidden; /* يمنع أي تصفح عرضي مزعج على الموبايل */
+    }
 
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap');
-*{box-sizing:border-box;margin:0;padding:0}
-:root{
-  --gold:#f0c060;
-  --gold-dim:rgba(240,192,96,0.15);
-  --bg:#0b0b12;
-  --bg3:#16161f;
-  --text:#e8e3d8;
-  --muted:#7a7570;
-  --faint:rgba(255,255,255,0.06);
-  --border:rgba(255,255,255,0.08);
-  --green:#25d366;
-}
-.root{
-  font-family:'Cairo',sans-serif;
-  background:var(--bg);
-  color:var(--text);
-  direction:rtl;
-  width:100%;
-  font-size:16px;
-}
+    /* NAV */
+    .nav{
+      display:flex;justify-content:space-between;align-items:center;
+      padding:14px 20px;
+      background:rgba(11,11,18,0.97);
+      border-bottom:1px solid var(--border);
+      position:sticky;top:0;z-index:99;
+    }
+    .nav-logo{font-size:18px;font-weight:800;color:var(--text)}
+    .nav-logo b{color:var(--gold)}
+    .nav-wa{
+      display:inline-flex;align-items:center;gap:6px;
+      background:var(--gold);color:#0b0b12;
+      font-family:'Cairo',sans-serif;font-size:14px;font-weight:700;
+      padding:8px 14px;border-radius:8px;text-decoration:none; /* تقليل البادينج قليلاً للموبايل */
+    }
 
-/* NAV */
-.nav{
-  display:flex;justify-content:space-between;align-items:center;
-  padding:14px 20px;
-  background:rgba(11,11,18,0.97);
-  border-bottom:1px solid var(--border);
-  position:sticky;top:0;z-index:99;
-}
-.nav-logo{font-size:18px;font-weight:800;color:var(--text)}
-.nav-logo b{color:var(--gold)}
-.nav-wa{
-  display:inline-flex;align-items:center;gap:6px;
-  background:var(--gold);color:#0b0b12;
-  font-family:'Cairo',sans-serif;font-size:14px;font-weight:700;
-  padding:10px 18px;border-radius:8px;text-decoration:none;
-}
+    /* HERO */
+    .hero{
+      padding:40px 20px 32px;
+      text-align:center;
+    }
+    .hero-name{
+      font-size:36px; /* تصغير نسبي ليناسب الشاشات الصغيرة ولا ينكسر السطر بشكل سيء */
+      font-weight:900;line-height:1.1;
+      color:#fff;letter-spacing:-1px;
+      margin-bottom:6px;
+    }
+    .hero-name span{color:var(--gold)}
+    .hero-title{
+      font-size:18px;font-weight:600;
+      color:var(--gold);margin-bottom:16px;
+    }
+    .hero-desc{
+      font-size:15px;color:#9a9488;
+      line-height:1.8;margin-bottom:28px;
+    }
 
-/* HERO */
-.hero{
-  padding:48px 20px 36px;
-  text-align:center;
-}
-.hero-name{
-  font-size:42px;
-  font-weight:900;line-height:1.05;
-  color:#fff;letter-spacing:-1px;
-  margin-bottom:6px;
-}
-.hero-name span{color:var(--gold)}
-.hero-title{
-  font-size:18px;font-weight:600;
-  color:var(--gold);margin-bottom:16px;
-}
-.hero-desc{
-  font-size:16px;color:#9a9488;
-  line-height:1.9;margin-bottom:28px;
-}
+    /* BTNS */
+    .btns{
+      display:flex;flex-direction:column;gap:10px;
+      margin-bottom:28px;
+    }
+    .btn-wa{
+      display:flex;align-items:center;justify-content:center;gap:8px;
+      background:var(--green);color:#fff;
+      font-family:'Cairo',sans-serif;font-size:16px;font-weight:700;
+      padding:14px 20px;border-radius:10px;text-decoration:none;
+      width:100%;
+    }
+    .btn-row{
+      display:flex;
+      flex-direction: column; /* جعل الأزرار فوق بعضها على الموبايل لتوفير مساحة للنص */
+      gap:10px;
+    }
+    @media(min-width: 400px) {
+      .btn-row { flex-direction: row; } /* لو الشاشة أعرض قليلاً يرجعوا جمب بعض */
+    }
+    .btn-out{
+      display:flex;align-items:center;justify-content:center;gap:6px;
+      background:var(--faint);color:var(--text);
+      border:1px solid var(--border);
+      font-family:'Cairo',sans-serif;font-size:14px;font-weight:600;
+      padding:12px 14px;border-radius:10px;text-decoration:none;
+      flex:1;text-align:center;
+    }
 
-/* BTNS */
-.btns{
-  display:flex;flex-direction:column;gap:10px;
-  margin-bottom:28px;
-}
-.btn-wa{
-  display:flex;align-items:center;justify-content:center;gap:8px;
-  background:var(--green);color:#fff;
-  font-family:'Cairo',sans-serif;font-size:16px;font-weight:700;
-  padding:14px 20px;border-radius:10px;text-decoration:none;
-  width:100%;
-}
-.btn-row{display:flex;gap:10px}
-.btn-out{
-  display:flex;align-items:center;justify-content:center;gap:6px;
-  background:var(--faint);color:var(--text);
-  border:1px solid var(--border);
-  font-family:'Cairo',sans-serif;font-size:14px;font-weight:600;
-  padding:12px 14px;border-radius:10px;text-decoration:none;
-  flex:1;text-align:center;
-}
+    /* QUOTE */
+    .quote{
+      border-right:3px solid var(--gold);
+      padding:10px 14px;
+      text-align:right;
+      font-size:15px;font-style:italic;
+      color:#c0b8a8;line-height:1.9;
+      display:block;
+    }
 
-/* QUOTE */
-.quote{
-  border-right:3px solid var(--gold);
-  padding:10px 14px;
-  text-align:right;
-  font-size:15px;font-style:italic;
-  color:#c0b8a8;line-height:1.9;
-  display:block;
-}
+    hr{border:none;border-top:1px solid var(--border);margin:0}
 
-hr{border:none;border-top:1px solid var(--border);margin:0}
+    /* STATS */
+    .stats-wrap{padding:32px 20px}
+    .eyebrow{
+      font-size:12px;font-weight:700;letter-spacing:2px;
+      color:var(--gold);text-transform:uppercase;
+      text-align:center;margin-bottom:16px;
+    }
+    .stats-grid{
+      display:grid;grid-template-columns:1fr 1fr;gap:10px;
+    }
+    .stat{
+      text-align:center;padding:16px 8px;
+      border-radius:12px;background:var(--bg3);
+      border:1px solid var(--border);
+    }
+    .stat-n{font-size:22px;font-weight:900;color:var(--gold);display:block;line-height:1.1}
+    .stat-l{font-size:12px;color:var(--muted);margin-top:4px;display:block;line-height:1.4}
 
-/* STATS */
-.stats-wrap{padding:32px 20px}
-.eyebrow{
-  font-size:12px;font-weight:700;letter-spacing:2px;
-  color:var(--gold);text-transform:uppercase;
-  text-align:center;margin-bottom:16px;
-}
-.stats-grid{
-  display:grid;grid-template-columns:1fr 1fr;gap:10px;
-}
-.stat{
-  text-align:center;padding:16px 8px;
-  border-radius:12px;background:var(--bg3);
-  border:1px solid var(--border);
-}
-.stat-n{font-size:22px;font-weight:900;color:var(--gold);display:block;line-height:1.1}
-.stat-l{font-size:12px;color:var(--muted);margin-top:4px;display:block;line-height:1.4}
+    /* SECTION */
+    .sec{padding:32px 20px}
+    .sec-title-gold{font-size:26px;font-weight:900;color:var(--gold);margin-bottom:20px}
+    .sec-title-white{font-size:26px;font-weight:900;color:#f5f0e8;margin-bottom:20px}
 
-/* SECTION */
-.sec{padding:32px 20px}
-.sec-title-gold{font-size:28px;font-weight:900;color:var(--gold);margin-bottom:20px}
-.sec-title-white{font-size:28px;font-weight:900;color:#f5f0e8;margin-bottom:20px}
+    /* SERVICES */
+    .services{display:flex;flex-direction:column;gap:12px}
+    .s-card{
+      padding:18px;border-radius:14px;
+      background:var(--bg3);border:1px solid var(--border);
+    }
+    .s-ico{font-size:22px;margin-bottom:8px;display:block}
+    .s-name{font-size:16px;font-weight:700;color:#f0ece0;margin-bottom:8px}
+    .tags{display:flex;flex-wrap:wrap;gap:6px}
+    .tag{font-size:12px;color:#8a8478;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);padding:4px 10px;border-radius:100px}
 
-/* SERVICES */
-.services{display:flex;flex-direction:column;gap:12px}
-.s-card{
-  padding:18px;border-radius:14px;
-  background:var(--bg3);border:1px solid var(--border);
-}
-.s-ico{font-size:22px;margin-bottom:8px;display:block}
-.s-name{font-size:16px;font-weight:700;color:#f0ece0;margin-bottom:8px}
-.tags{display:flex;flex-wrap:wrap;gap:6px}
-.tag{font-size:12px;color:#8a8478;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);padding:4px 10px;border-radius:100px}
+    /* WHY */
+    .why{display:flex;flex-direction:column;gap:10px}
+    .why-item{
+      display:flex;align-items:flex-start;gap:14px;
+      padding:16px;background:var(--bg3);
+      border:1px solid var(--border);border-radius:12px;
+    }
+    .why-check{
+      width:28px;height:28px;flex-shrink:0;
+      border-radius:50%;background:var(--gold-dim);
+      display:flex;align-items:center;justify-content:center;
+      color:var(--gold);font-size:14px;font-weight:700;
+    }
+    .why-t{font-size:15px;color:#b8b0a0;line-height:1.7}
 
-/* WHY */
-.why{display:flex;flex-direction:column;gap:10px}
-.why-item{
-  display:flex;align-items:flex-start;gap:14px;
-  padding:16px;background:var(--bg3);
-  border:1px solid var(--border);border-radius:12px;
-}
-.why-check{
-  width:28px;height:28px;flex-shrink:0;
-  border-radius:50%;background:var(--gold-dim);
-  display:flex;align-items:center;justify-content:center;
-  color:var(--gold);font-size:14px;font-weight:700;
-}
-.why-t{font-size:15px;color:#b8b0a0;line-height:1.7}
+    /* CTA */
+    .cta-wrap{padding:0 20px 48px}
+    .cta-box{
+      background:var(--bg3);
+      border:1px solid rgba(240,192,96,.2);
+      border-radius:20px;
+      padding:36px 16px; /* تقليل البادينج الجانبي قليلاً */
+      text-align:center;
+    }
+    .cta-title{font-size:22px;font-weight:900;color:#fff;margin-bottom:10px;line-height:1.4}
+    .cta-sub{font-size:15px;color:var(--muted);margin-bottom:24px;line-height:1.8}
+    .cta-btn-wrap{margin-bottom:14px}
+    .cta-wa{
+      display:flex;align-items:center;justify-content:center;gap:8px;
+      background:var(--green);color:#fff;
+      font-family:'Cairo',sans-serif;font-size:16px;font-weight:700;
+      padding:15px 20px;border-radius:10px;text-decoration:none;
+      width:100%;
+    }
+    .cta-phone{font-size:14px;color:#5a5650;direction:ltr;display:block;margin-bottom:6px}
+    .cta-note{font-size:13px;color:var(--muted);margin-bottom:16px}
 
-/* CTA */
-.cta-wrap{padding:0 20px 48px}
-.cta-box{
-  background:var(--bg3);
-  border:1px solid rgba(240,192,96,.2);
-  border-radius:20px;
-  padding:36px 20px;
-  text-align:center;
-}
-.cta-title{font-size:22px;font-weight:900;color:#fff;margin-bottom:10px;line-height:1.4}
-.cta-sub{font-size:15px;color:var(--muted);margin-bottom:24px;line-height:1.8}
-.cta-btn-wrap{margin-bottom:14px}
-.cta-wa{
-  display:flex;align-items:center;justify-content:center;gap:8px;
-  background:var(--green);color:#fff;
-  font-family:'Cairo',sans-serif;font-size:16px;font-weight:700;
-  padding:15px 20px;border-radius:10px;text-decoration:none;
-  width:100%;
-}
-.cta-phone{font-size:14px;color:#5a5650;direction:ltr;display:block;margin-bottom:6px}
-.cta-note{font-size:13px;color:var(--muted);margin-bottom:16px}
+    /* FORM */
+    .form{display:flex;flex-direction:column;gap:10px}
+    .form input{
+      background:rgba(255,255,255,.05);
+      border:1px solid rgba(255,255,255,.1);
+      border-radius:10px;color:var(--text);
+      font-family:'Cairo',sans-serif;font-size:16px;
+      padding:14px 16px;text-align:right;outline:none;
+      width:100%;
+      -webkit-appearance: none; /* يضمن مظهر متناسق على هواتف آيفون */
+    }
+    .form input::placeholder{color:#4a4640}
+    .form input:focus{border-color:rgba(240,192,96,.5)}
+    .form-btn{
+      background:var(--gold);color:#0b0b12;border:none;
+      border-radius:10px;font-family:'Cairo',sans-serif;
+      font-size:16px;font-weight:700;padding:14px;cursor:pointer;
+      width:100%;
+    }
+    .form-ok{font-size:14px;color:#4dda6e;text-align:center;display:none;padding:6px}
 
-/* FORM */
-.form{display:flex;flex-direction:column;gap:10px}
-.form input{
-  background:rgba(255,255,255,.05);
-  border:1px solid rgba(255,255,255,.1);
-  border-radius:10px;color:var(--text);
-  font-family:'Cairo',sans-serif;font-size:16px;
-  padding:14px 16px;text-align:right;outline:none;
-  width:100%;
-}
-.form input::placeholder{color:#4a4640}
-.form input:focus{border-color:rgba(240,192,96,.5)}
-.form-btn{
-  background:var(--gold);color:#0b0b12;border:none;
-  border-radius:10px;font-family:'Cairo',sans-serif;
-  font-size:16px;font-weight:700;padding:14px;cursor:pointer;
-  width:100%;
-}
-.form-ok{font-size:14px;color:#4dda6e;text-align:center;display:none;padding:6px}
-
-footer{
-  text-align:center;padding:20px 16px;
-  border-top:1px solid var(--border);
-  font-size:13px;color:#3a3830;
-}
-footer b{color:var(--gold)}
-</style>
+    footer{
+      text-align:center;padding:20px 16px;
+      border-top:1px solid var(--border);
+      font-size:13px;color:#3a3830;
+    }
+    footer b{color:var(--gold)}
+    </style>
+</head>
+<body>
 
 <div class="root">
 
@@ -279,7 +299,7 @@ footer b{color:var(--gold)}
 
 <div class="cta-wrap">
   <div class="cta-box">
-    <h2 class="cta-title">هل أنت مستعد لتنمية مبيعات مشروعك؟</h2>
+    <h2 class="cta-title">هل أنت مستعد لتنمية مبيعات مشروعك?</h2>
     <p class="cta-sub">يسعدني مناقشة مشروعك واختيار أفضل استراتيجية تناسب نشاطك التجاري.</p>
     <div class="cta-btn-wrap">
       <a href="https://api.whatsapp.com/send?phone=201016871850" target="_blank" class="cta-wa">
@@ -311,3 +331,5 @@ function send(){
   document.getElementById('p').value='';
 }
 </script>
+</body>
+</html>

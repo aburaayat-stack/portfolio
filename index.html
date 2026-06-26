@@ -1,0 +1,313 @@
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap');
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --gold:#f0c060;
+  --gold-dim:rgba(240,192,96,0.15);
+  --bg:#0b0b12;
+  --bg3:#16161f;
+  --text:#e8e3d8;
+  --muted:#7a7570;
+  --faint:rgba(255,255,255,0.06);
+  --border:rgba(255,255,255,0.08);
+  --green:#25d366;
+}
+.root{
+  font-family:'Cairo',sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  direction:rtl;
+  width:100%;
+  font-size:16px;
+}
+
+/* NAV */
+.nav{
+  display:flex;justify-content:space-between;align-items:center;
+  padding:14px 20px;
+  background:rgba(11,11,18,0.97);
+  border-bottom:1px solid var(--border);
+  position:sticky;top:0;z-index:99;
+}
+.nav-logo{font-size:18px;font-weight:800;color:var(--text)}
+.nav-logo b{color:var(--gold)}
+.nav-wa{
+  display:inline-flex;align-items:center;gap:6px;
+  background:var(--gold);color:#0b0b12;
+  font-family:'Cairo',sans-serif;font-size:14px;font-weight:700;
+  padding:10px 18px;border-radius:8px;text-decoration:none;
+}
+
+/* HERO */
+.hero{
+  padding:48px 20px 36px;
+  text-align:center;
+}
+.hero-name{
+  font-size:42px;
+  font-weight:900;line-height:1.05;
+  color:#fff;letter-spacing:-1px;
+  margin-bottom:6px;
+}
+.hero-name span{color:var(--gold)}
+.hero-title{
+  font-size:18px;font-weight:600;
+  color:var(--gold);margin-bottom:16px;
+}
+.hero-desc{
+  font-size:16px;color:#9a9488;
+  line-height:1.9;margin-bottom:28px;
+}
+
+/* BTNS */
+.btns{
+  display:flex;flex-direction:column;gap:10px;
+  margin-bottom:28px;
+}
+.btn-wa{
+  display:flex;align-items:center;justify-content:center;gap:8px;
+  background:var(--green);color:#fff;
+  font-family:'Cairo',sans-serif;font-size:16px;font-weight:700;
+  padding:14px 20px;border-radius:10px;text-decoration:none;
+  width:100%;
+}
+.btn-row{display:flex;gap:10px}
+.btn-out{
+  display:flex;align-items:center;justify-content:center;gap:6px;
+  background:var(--faint);color:var(--text);
+  border:1px solid var(--border);
+  font-family:'Cairo',sans-serif;font-size:14px;font-weight:600;
+  padding:12px 14px;border-radius:10px;text-decoration:none;
+  flex:1;text-align:center;
+}
+
+/* QUOTE */
+.quote{
+  border-right:3px solid var(--gold);
+  padding:10px 14px;
+  text-align:right;
+  font-size:15px;font-style:italic;
+  color:#c0b8a8;line-height:1.9;
+  display:block;
+}
+
+hr{border:none;border-top:1px solid var(--border);margin:0}
+
+/* STATS */
+.stats-wrap{padding:32px 20px}
+.eyebrow{
+  font-size:12px;font-weight:700;letter-spacing:2px;
+  color:var(--gold);text-transform:uppercase;
+  text-align:center;margin-bottom:16px;
+}
+.stats-grid{
+  display:grid;grid-template-columns:1fr 1fr;gap:10px;
+}
+.stat{
+  text-align:center;padding:16px 8px;
+  border-radius:12px;background:var(--bg3);
+  border:1px solid var(--border);
+}
+.stat-n{font-size:22px;font-weight:900;color:var(--gold);display:block;line-height:1.1}
+.stat-l{font-size:12px;color:var(--muted);margin-top:4px;display:block;line-height:1.4}
+
+/* SECTION */
+.sec{padding:32px 20px}
+.sec-title-gold{font-size:28px;font-weight:900;color:var(--gold);margin-bottom:20px}
+.sec-title-white{font-size:28px;font-weight:900;color:#f5f0e8;margin-bottom:20px}
+
+/* SERVICES */
+.services{display:flex;flex-direction:column;gap:12px}
+.s-card{
+  padding:18px;border-radius:14px;
+  background:var(--bg3);border:1px solid var(--border);
+}
+.s-ico{font-size:22px;margin-bottom:8px;display:block}
+.s-name{font-size:16px;font-weight:700;color:#f0ece0;margin-bottom:8px}
+.tags{display:flex;flex-wrap:wrap;gap:6px}
+.tag{font-size:12px;color:#8a8478;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);padding:4px 10px;border-radius:100px}
+
+/* WHY */
+.why{display:flex;flex-direction:column;gap:10px}
+.why-item{
+  display:flex;align-items:flex-start;gap:14px;
+  padding:16px;background:var(--bg3);
+  border:1px solid var(--border);border-radius:12px;
+}
+.why-check{
+  width:28px;height:28px;flex-shrink:0;
+  border-radius:50%;background:var(--gold-dim);
+  display:flex;align-items:center;justify-content:center;
+  color:var(--gold);font-size:14px;font-weight:700;
+}
+.why-t{font-size:15px;color:#b8b0a0;line-height:1.7}
+
+/* CTA */
+.cta-wrap{padding:0 20px 48px}
+.cta-box{
+  background:var(--bg3);
+  border:1px solid rgba(240,192,96,.2);
+  border-radius:20px;
+  padding:36px 20px;
+  text-align:center;
+}
+.cta-title{font-size:22px;font-weight:900;color:#fff;margin-bottom:10px;line-height:1.4}
+.cta-sub{font-size:15px;color:var(--muted);margin-bottom:24px;line-height:1.8}
+.cta-btn-wrap{margin-bottom:14px}
+.cta-wa{
+  display:flex;align-items:center;justify-content:center;gap:8px;
+  background:var(--green);color:#fff;
+  font-family:'Cairo',sans-serif;font-size:16px;font-weight:700;
+  padding:15px 20px;border-radius:10px;text-decoration:none;
+  width:100%;
+}
+.cta-phone{font-size:14px;color:#5a5650;direction:ltr;display:block;margin-bottom:6px}
+.cta-note{font-size:13px;color:var(--muted);margin-bottom:16px}
+
+/* FORM */
+.form{display:flex;flex-direction:column;gap:10px}
+.form input{
+  background:rgba(255,255,255,.05);
+  border:1px solid rgba(255,255,255,.1);
+  border-radius:10px;color:var(--text);
+  font-family:'Cairo',sans-serif;font-size:16px;
+  padding:14px 16px;text-align:right;outline:none;
+  width:100%;
+}
+.form input::placeholder{color:#4a4640}
+.form input:focus{border-color:rgba(240,192,96,.5)}
+.form-btn{
+  background:var(--gold);color:#0b0b12;border:none;
+  border-radius:10px;font-family:'Cairo',sans-serif;
+  font-size:16px;font-weight:700;padding:14px;cursor:pointer;
+  width:100%;
+}
+.form-ok{font-size:14px;color:#4dda6e;text-align:center;display:none;padding:6px}
+
+footer{
+  text-align:center;padding:20px 16px;
+  border-top:1px solid var(--border);
+  font-size:13px;color:#3a3830;
+}
+footer b{color:var(--gold)}
+</style>
+
+<div class="root">
+
+<nav class="nav">
+  <div class="nav-logo">Ahmed <b>Alaa</b></div>
+  <a href="https://api.whatsapp.com/send?phone=201016871850" target="_blank" class="nav-wa">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.123 1.535 5.856L.057 23.943l6.249-1.438A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.806 9.806 0 01-5.004-1.367l-.359-.214-3.71.853.88-3.608-.234-.372A9.785 9.785 0 012.182 12C2.182 6.57 6.57 2.182 12 2.182c5.43 0 9.818 4.388 9.818 9.818 0 5.43-4.388 9.818-9.818 9.818z"/></svg>
+    تواصل الآن
+  </a>
+</nav>
+
+<section class="hero">
+  <h1 class="hero-name">Ahmed <span>Alaa</span></h1>
+  <p class="hero-title">Digital Marketing Strategist</p>
+  <p class="hero-desc">أساعد المتاجر والبراندات على تحقيق نمو حقيقي وزيادة المبيعات من خلال استراتيجيات التسويق الرقمي وصناعة المحتوى والإعلانات المدفوعة.</p>
+  <div class="btns">
+    <a href="https://api.whatsapp.com/send?phone=201016871850" target="_blank" class="btn-wa">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.123 1.535 5.856L.057 23.943l6.249-1.438A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.806 9.806 0 01-5.004-1.367l-.359-.214-3.71.853.88-3.608-.234-.372A9.785 9.785 0 012.182 12C2.182 6.57 6.57 2.182 12 2.182c5.43 0 9.818 4.388 9.818 9.818 0 5.43-4.388 9.818-9.818 9.818z"/></svg>
+      تواصل عبر واتساب
+    </a>
+    <div class="btn-row">
+      <a href="#" class="btn-out">📊 نتائج الحملات الإعلانية</a>
+      <a href="#" class="btn-out">🎨 التصاميم الإبداعية</a>
+    </div>
+  </div>
+  <blockquote class="quote">التسويق الفعال لا يقاس بعدد المشاهدات، بل بعدد العملاء والمبيعات التي يحققها.</blockquote>
+</section>
+
+<hr>
+
+<div class="stats-wrap">
+  <p class="eyebrow">أرقام تتحدث</p>
+  <div class="stats-grid">
+    <div class="stat"><span class="stat-n">+7</span><span class="stat-l">سنوات خبرة</span></div>
+    <div class="stat"><span class="stat-n">3000+</span><span class="stat-l">حملة إعلانية</span></div>
+    <div class="stat"><span class="stat-n">500K+</span><span class="stat-l">جمهور عبر منصاتي</span></div>
+    <div class="stat"><span class="stat-n">3 أسواق</span><span class="stat-l">مصر · السعودية · الخليج</span></div>
+  </div>
+</div>
+
+<hr>
+
+<section class="sec">
+  <h2 class="sec-title-gold">خدماتي</h2>
+  <div class="services">
+    <div class="s-card">
+      <span class="s-ico">📈</span>
+      <p class="s-name">إدارة الحملات الإعلانية</p>
+      <div class="tags"><span class="tag">Meta Ads</span><span class="tag">TikTok Ads</span><span class="tag">Snapchat Ads</span></div>
+    </div>
+    <div class="s-card">
+      <span class="s-ico">🎯</span>
+      <p class="s-name">استراتيجية المحتوى</p>
+      <div class="tags"><span class="tag">Content Strategy</span><span class="tag">Copywriting</span></div>
+    </div>
+    <div class="s-card">
+      <span class="s-ico">🎨</span>
+      <p class="s-name">تصميمات السوشيال ميديا</p>
+      <div class="tags"><span class="tag">Social Media Design</span></div>
+    </div>
+    <div class="s-card">
+      <span class="s-ico">🎥</span>
+      <p class="s-name">فيديوهات إعلانية</p>
+      <div class="tags"><span class="tag">AI Video Ads</span><span class="tag">Reels</span></div>
+    </div>
+    <div class="s-card">
+      <span class="s-ico">📊</span>
+      <p class="s-name">تحليل الأداء</p>
+      <div class="tags"><span class="tag">Reports</span><span class="tag">Optimization</span></div>
+    </div>
+  </div>
+</section>
+
+<hr>
+
+<section class="sec">
+  <h2 class="sec-title-white">لماذا العمل معي؟</h2>
+  <div class="why">
+    <div class="why-item"><div class="why-check">✓</div><p class="why-t">زيادة المبيعات بأفضل عائد على ميزانية التسويق.</p></div>
+    <div class="why-item"><div class="why-check">✓</div><p class="why-t">قرارات مبنية على البيانات وليس التخمين.</p></div>
+    <div class="why-item"><div class="why-check">✓</div><p class="why-t">تطوير الحملات باستمرار للوصول إلى أفضل النتائج.</p></div>
+    <div class="why-item"><div class="why-check">✓</div><p class="why-t">تواصل مستمر وتقارير واضحة عن الأداء.</p></div>
+  </div>
+</section>
+
+<div class="cta-wrap">
+  <div class="cta-box">
+    <h2 class="cta-title">هل أنت مستعد لتنمية مبيعات مشروعك؟</h2>
+    <p class="cta-sub">يسعدني مناقشة مشروعك واختيار أفضل استراتيجية تناسب نشاطك التجاري.</p>
+    <div class="cta-btn-wrap">
+      <a href="https://api.whatsapp.com/send?phone=201016871850" target="_blank" class="cta-wa">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.123 1.535 5.856L.057 23.943l6.249-1.438A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.806 9.806 0 01-5.004-1.367l-.359-.214-3.71.853.88-3.608-.234-.372A9.785 9.785 0 012.182 12C2.182 6.57 6.57 2.182 12 2.182c5.43 0 9.818 4.388 9.818 9.818 0 5.43-4.388 9.818-9.818 9.818z"/></svg>
+        تواصل عبر واتساب
+      </a>
+    </div>
+    <p class="cta-phone">📞 01016871850</p>
+    <p class="cta-note">أو اترك بياناتك وسأتواصل معك في أقرب وقت.</p>
+    <div class="form">
+      <input type="text" id="n" placeholder="اسمك">
+      <input type="tel" id="p" placeholder="رقم هاتفك">
+      <button class="form-btn" onclick="send()">إرسال بياناتك</button>
+      <p class="form-ok" id="ok">✅ تم الاستلام! سأتواصل معك قريباً.</p>
+    </div>
+  </div>
+</div>
+
+<footer>كل الحقوق محفوظة © 2025 · <b>Ahmed Alaa</b></footer>
+
+</div>
+<script>
+function send(){
+  var n=document.getElementById('n').value.trim();
+  var p=document.getElementById('p').value.trim();
+  if(!n||!p){alert('من فضلك أدخل اسمك ورقم هاتفك.');return;}
+  document.getElementById('ok').style.display='block';
+  document.getElementById('n').value='';
+  document.getElementById('p').value='';
+}
+</script>
